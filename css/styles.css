@@ -40,7 +40,7 @@
   --radio-pill:     60px;
 
   --tr:             all .35s cubic-bezier(.4,0,.2,1);
-  --navbar-h:       90px;
+  --navbar-h:       70px;
 }
 
 /* ─── RESET ─── */
@@ -987,8 +987,8 @@ text-align: center;
 }
 
 .promo-visual-panel img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 90%;
   object-fit: cover;
  opacity: .80;
   

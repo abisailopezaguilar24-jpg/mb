@@ -723,13 +723,7 @@ document.addEventListener('keydown', e => {
 });
 
 // Menú móvil
-const menuBtn = document.getElementById('mobile-menu');
-if (menuBtn) {
-    menuBtn.addEventListener('click', () => {
-        const navList = document.getElementById('nav-list');
-        if (navList) navList.classList.toggle('active');
-    });
-}
+
 
 // Renderizar catálogo
 renderCatalog();
