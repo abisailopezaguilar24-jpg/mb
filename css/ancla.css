@@ -1,0 +1,215 @@
+:root {
+    --azul-principal: #026ecd;
+    --gris-corporativo: #415a66;
+    --blanco: #ffffff;
+    --gris-claro: #f4f7f6;
+    --negro: #000000;
+    --transicion: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Lato', sans-serif; 
+    line-height: 1.6 ; 
+    color: var(--negro); 
+    background-color: var(--blanco);
+    overflow-x: hidden;
+}
+
+
+
+@media (max-width: 850px) {
+    .navbar { 
+        height: 70px; 
+        display: flex; 
+        justify-content: space-between; /* Logo a la izq, Botón a la der */
+        align-items: center;
+        padding: 0 5%;
+    }
+    
+    .logo-img {
+        height: 90px; /* Logo más discreto en móvil */
+        justify-content: center;
+    }
+    .navbar.scrolled .logo-img {
+    height: 90px;
+}
+
+    .nav-menu { 
+        display: none; 
+    }
+
+    
+}
+.menu-toggle {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px; /* Espaciado entre barritas */
+}
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--negro); /* O el color que prefieras */
+    transition: var(--transicion);
+}
+.menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.menu-toggle.active span:nth-child(2) { opacity: 0; }
+.menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+@media (max-width: 850px) {
+    .brand-container {
+        flex: 0; /* Evita que el logo ocupe todo el espacio central */
+    }
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 2100;
+        display: flex; /* Aparece en celular */
+        margin-left : 220px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto por defecto */
+        width: 100%;
+        height: 100vh;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        
+        
+    }
+    .nav-menu a:hover { 
+    color: var(--negro); 
+}
+    .nav-menu.active {
+        right: 0; /* Se desliza desde la derecha */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .nav-menu a {
+        color: var(--negro); /* Azul para que se lea en fondo blanco */
+        font-size: 1.8rem;
+    }
+    .navbar.scrolled .nav-menu a {
+    color: var(--negro);
+    
+}
+.navbar.scrolled .nav-menu a:hover,
+.navbar.scrolled .nav-menu a.active {
+    color: var(--negro);
+}
+.navbar.scrolled .nav-menu a::after {
+    background: var(--negro);
+}
+}
+
+
+
+/* --- WHATSAPP FLOTANTE --- */
+.wpp-float { 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    background: #25d366; 
+    color: white; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 30px; 
+    z-index: 3000; 
+    text-decoration: none; 
+    transition: var(--transicion); 
+}
+
+.wpp-float:hover { 
+    transform: translateY(-10px); 
+    background: #128c7e; 
+}
+
+/* --- FOOTER --- */
+.main-footer { 
+    background: #1a1a1a; 
+    color: white; 
+    padding: 60px 10% 20px; 
+    text-align: center; 
+}
+
+.logo-imgg { 
+    height: 100px; 
+    margin-bottom: 20px; 
+}
+
+.footer-social { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 20px; 
+}
+
+.social-icon { 
+    width: 40px; 
+    height: 40px; 
+    background: rgba(255,255,255,0.1); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    text-decoration: none; 
+    transition: 0.3s; 
+}
+
+.social-icon:hover { 
+    background: var(--azul-principal); 
+    transform: scale(1.1); 
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+/* --- WHATSAPP FLOTANTE --- */
+.wpp-float { 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    background: #25d366; 
+    color: white; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 30px; 
+    z-index: 3000; 
+    text-decoration: none; 
+    transition: var(--transicion); 
+}
+
+.wpp-float:hover { 
+    transform: translateY(-10px); 
+    background: #128c7e; 
+}
